@@ -53,7 +53,7 @@ def display_results(optimal_grade, optimal_sequence):
             f"{slot['start']}h - {slot['end']}h"
         )
 
-        print(f"   Duration: {task.duration} hours")
+        print(f"   Estimated time for completion (hours): {task.duration} hours")
 
         print(f"   Grade Contribution: +{task.grade}")
 

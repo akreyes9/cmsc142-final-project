@@ -18,32 +18,32 @@ class InputHandler:
             filename = input("Enter CSV filename (e.g., tasks.csv): ")
             tasks = self.load_from_csv(filename)
 
-            T = self.safe_int("Enter available study time (T in hours): ")
+            T = self.safe_int("Enter available study time (hours): ")
             tasks = self.validate_tasks(T, tasks)
 
             return T, tasks
 
         else:
-            T = self.safe_int("Enter available study time: ")
+            T = self.safe_int("Enter available study time (hours): ")
             n = self.safe_int("Enter number of tasks: ")
 
             tasks = []
 
             for i in range(n):
-                print(f"\n--- Task {i + 1} ---")
+                print(f"\n----- Task {i + 1} -----")
 
-                name = input("Enter task name or description: ")
+                name = input("Enter task name: ")
 
                 duration = self.safe_int(
-                    "Estimated time required to complete (hours): "
+                    "Estimated time for completion (hours): "
                 )
 
                 deadline = self.safe_int(
-                    "Deadline (hours from now until due): "
+                    "Deadline (hours until due): "
                 )
 
                 grade = self.safe_int(
-                    "Grade contribution (points or weight): "
+                    "Grade contribution: "
                 )
 
                 tasks.append(Task(name, duration, deadline, grade))
