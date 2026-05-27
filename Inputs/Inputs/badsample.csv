@@ -1,0 +1,6 @@
+name,duration,deadline,value
+ValidTask,2,5,10
+TooLong,12,10,20
+BadDeadline,4,2,15
+Negative,-1,5,10
+BadFormat,abc,5,10
